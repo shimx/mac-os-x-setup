@@ -1,0 +1,37 @@
+---
+ghq_root: "{{ ansible_user_dir }}/.ghq/github.com"
+macossetup_root: "{{ ghq_root }}/shimx/mac-os-x-setup"
+
+directorys:
+  - { dest: "{{ ansible_user_dir }}/Library/Application Support/iTerm2" }
+  - { dest: "{{ ansible_user_dir }}/Library/Application Support/Karabiner" }
+
+symlinks:
+  - { src: "{{ macossetup_root }}/roles/mac/files/Library/Application Support/iTerm2/DynamicProfiles", dest: "{{ ansible_user_dir }}/Library/Application Support/iTerm2/DynamicProfiles" }
+  - { src: "{{ macossetup_root }}/roles/mac/files/Library/Application Support/Karabiner/private.xml", dest: "{{ ansible_user_dir }}/Library/Application Support/Karabiner/private.xml" }
+
+osx_defaults:
+  - domain: com.apple.dock
+    key: autohide
+    type: bool
+    value: true
+    notify: "Restart Dock"
+
+  - domain: NSGlobalDomain
+    key: AppleShowAllExtensions
+    type: bool
+    value: true
+    notify: "Restart Finder"
+
+  - domain: com.apple.finder
+    key: AppleShowAllFiles
+    type: bool
+    value: true
+    notify: "Restart Finder"
+
+  - domain: com.apple.finder
+    key: ShowPathBar
+    type: bool
+    value: true
+    notify: "Restart Finder"
+

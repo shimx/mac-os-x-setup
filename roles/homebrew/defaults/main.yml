@@ -1,0 +1,69 @@
+---
+homebrew_taps:
+  - { tap: caskroom/cask }
+  - { tap: homebrew/binary }
+  - { tap: homebrew/dupes }
+  - { tap: homebrew/versions }
+  - { tap: caskroom/fonts }
+  - { tap: caskroom/versions }
+  - { tap: sanemat/font }
+  - { tap: kevwil/patches }
+  - { tap: bfontaine/utils }
+  - { tap: caarlos0/antibody }
+  - { tap: caius/jo }
+  - { tap: classmethod/repos }
+
+homebrew_packages:
+  - { name: readline }
+  - { name: openssl }
+  - { name: openssl, state: linked, install_options: force }
+  - { name: gcc }
+  - { name: python }
+  - { name: python3 }
+  - { name: git }
+  - { name: vim, install_options: with-lua,override-system-vim }
+  - { name: zsh, install_options: disable-etcdir }
+  - { name: zsh-completions }
+  - { name: wget }
+  - { name: curl }
+  - { name: cmake }
+  - { name: autoconf }
+  - { name: automake }
+  - { name: pkg-config }
+  - { name: ctags }
+  - { name: tree }
+  - { name: lv }
+  - { name: nkf }
+  - { name: jq }
+  - { name: go }
+  - { name: direnv }
+  - { name: peco }
+  - { name: hub }
+  - { name: ghq }
+  - { name: tig }
+  - { name: pyenv }
+  - { name: pyenv-virtualenv }
+  - { name: plenv }
+  - { name: perl-build }
+  - { name: rbenv }
+  - { name: ruby-build }
+  - { name: mysql }
+  - { name: sqlite }
+  - { name: imagemagick }
+  - { name: xz }
+  - { name: tmux }
+  - { name: autojump }
+  - { name: gibo }
+  - { name: source-highlight }
+  - { name: ag }
+  - { name: ack }
+  - { name: ricty, install_options: vim-powerline }
+  - { name: neovim/neovim/neovim }
+
+homebrew_cask_packages:
+  - { name: iterm2 }
+  - { name: sourcetree }
+  - { name: gitx }
+  - { name: atom }
+  - { name: vagrant }
+  - { name: virtualbox }

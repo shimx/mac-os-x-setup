@@ -1,0 +1,14 @@
+---
+ghq_root: "{{ ansible_user_dir }}/.ghq/github.com"
+dotfiles_root: "{{ ghq_root }}/shimx/dotfiles"
+
+git_repositories:
+  - { repo: "https://github.com/shimx/dotfiles.git", dest: "{{ ghq_root }}/shimx/dotfiles" }
+  - { repo: "https://github.com/shimx/mac-os-x-setup.git", dest: "{{ ghq_root }}/shimx/mac-os-x-setup" }
+
+symlinks:
+  - { src: "{{ dotfiles_root }}", dest: "{{ ansible_user_dir }}/dotfiles" }
+  - { src: "{{ dotfiles_root }}/config/tmux/tmux.conf", dest: "{{ ansible_user_dir }}/.tmux.conf" }
+  - { src: "{{ dotfiles_root }}/config/zsh/zshenv", dest: "{{ ansible_user_dir }}/.zshenv" }
+  - { src: "{{ dotfiles_root }}/config/zsh/zshrc", dest: "{{ ansible_user_dir }}/.zshrc" }
+  - { src: "{{ dotfiles_root }}/config/vim/vimrc", dest: "{{ ansible_user_dir }}/.vimrc" }

@@ -21,7 +21,8 @@ homebrew_packages:
   - { name: python }
   - { name: python3 }
   - { name: git }
-  - { name: vim, install_options: with-lua,override-system-vim }
+  - { name: lua }
+  - { name: vim, install_options: "with-python,with-python3,with-lua" }
   - { name: zsh, install_options: disable-etcdir }
   - { name: zsh-completions }
   - { name: wget }

@@ -4,7 +4,6 @@ dotfiles_root: "{{ ghq_root }}/shimx/dotfiles"
 
 git_repositories:
   - { repo: "https://github.com/shimx/dotfiles.git", dest: "{{ ghq_root }}/shimx/dotfiles" }
-  - { repo: "https://github.com/shimx/mac-os-x-setup.git", dest: "{{ ghq_root }}/shimx/mac-os-x-setup" }
 
 symlinks:
   - { src: "{{ dotfiles_root }}", dest: "{{ ansible_user_dir }}/dotfiles" }

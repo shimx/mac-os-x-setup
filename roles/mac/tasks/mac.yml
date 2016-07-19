@@ -17,6 +17,14 @@
   with_items:
     - "{{ symlinks }}"
 
+- name: Setup Karabiner settings
+  shell: |
+    sh {{ karabiner_shell }}
+  args:
+    removes: "{{ karabiner_shell }}"
+  notify:
+    - Setup Karabiner
+
 - name: Install ricty fonts
   shell: |
     cp -f $(brew --cellar ricty)/*/share/fonts/Ricty*.ttf ~/Library/Fonts && fc-cache -vf

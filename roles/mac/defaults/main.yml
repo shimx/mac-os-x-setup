@@ -1,6 +1,7 @@
 ---
 ghq_root: "{{ ansible_user_dir }}/.ghq/github.com"
 macossetup_root: "{{ ghq_root }}/shimx/mac-os-x-setup"
+karabiner_shell: "{{ macossetup_root }}/roles/mac/files/bin/karabiner.sh"
 
 directorys:
   - { dest: "{{ ansible_user_dir }}/Library/Application Support/iTerm2" }

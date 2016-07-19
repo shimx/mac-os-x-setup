@@ -62,6 +62,7 @@ homebrew_packages:
   - { name: neovim/neovim/neovim }
 
 homebrew_cask_packages:
+  - { name: karabiner }
   - { name: iterm2 }
   - { name: sourcetree }
   - { name: gitx }

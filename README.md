@@ -58,7 +58,7 @@ $ HOMEBREW_CASK_OPTS="--appdir=/Applications" ansible-playbook site.yml -vvvv --
 ## その他
 
 * 必要そうなアプリをAppStoreや公式サイトからダウンロード
-  * AppStoreにあるもの、アプリ内でアップデートするものはbrew caskで管理しない方針
+  * AppStoreにあるもの、brew caskで管理するには微妙そうなものはbrew caskで管理しない方針
   * Google日本語入力、chromeなど
 * ChromeとFirefoxの同期
 * SSHの秘密鍵を設定

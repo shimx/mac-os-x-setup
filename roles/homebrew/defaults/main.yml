@@ -60,6 +60,7 @@ homebrew_packages:
   - { name: ack }
   - { name: ricty, install_options: vim-powerline }
   - { name: neovim/neovim/neovim }
+  - { name: heroku-toolbelt }
 
 homebrew_cask_packages:
   - { name: karabiner }

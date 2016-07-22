@@ -58,6 +58,7 @@ homebrew_packages:
   - { name: source-highlight }
   - { name: ag }
   - { name: ack }
+  - { name: htop }
   - { name: ricty, install_options: vim-powerline }
   - { name: neovim/neovim/neovim }
   - { name: heroku-toolbelt }

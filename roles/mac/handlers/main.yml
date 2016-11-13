@@ -6,3 +6,9 @@
 - name: Restart Finder
   shell: |
     killall Finder
+
+- name: Setup Karabiner
+  shell: |
+    ./karabiner.sh
+  args:
+    chdir: roles/mac/files/bin

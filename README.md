@@ -40,6 +40,11 @@ export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 EOT
+$ cat >>~/.bashrc <<'EOT'
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+EOT
 $ exec $SHELL
 $ pyenv install 2.<python-version>
 $ pyenv global 2.<python-version>

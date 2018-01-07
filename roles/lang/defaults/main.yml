@@ -1,9 +1,6 @@
 ---
-pip_packages:
+pip3_packages:
   - { name: ansible }
   - { name: ansible_lint }
   - { name: ansible_shell }
-  - { name: neovim }
-
-pip3_packages:
   - { name: neovim }

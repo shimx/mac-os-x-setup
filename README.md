@@ -6,15 +6,17 @@ Mac OS X 初期環境構築
 * [Mac の開発環境構築を自動化する (2015 年初旬編)](http://t-wada.hatenablog.jp/entry/mac-provisioning-by-ansible)
 * [Mac OS Xの環境構築を自動化する(2016年度初旬編)](http://dev.classmethod.jp/server-side/ansible/automate-build-mac-osx-env-by-ansible/)
 * https://github.com/knakayama/mac-os-x-setup
+* [Macの環境構築を自動化してOS再インストールに備える](http://patorash.hatenablog.com/entry/2017/09/18/021352)
 
 素晴らしすぎて感謝しかない…
 
 ## 前提条件
 
-* 以下OS X El Capitan(10.11.6)で動作確認済
+* アプリごとに個々にアップデートしたいのでbrew-caskは使わない方針
+* 以下OS X High Sierra(10.13.1)で動作確認済
 * システムをアップデートしておく
-* Xcodeインストール
-* Xcodeコマンドラインツールインストール
+* Xcodeをインストールしておく
+* Xcodeコマンドラインツールをインストールしておく
 ```bash
 $ xcode-select --install
 ```
@@ -33,22 +35,26 @@ $ git clone https://github.com/shimx/mac-os-x-setup ~/.ghq/github.com/shimx/mac-
 
 ## Ansible実行
 
-* pyenv設定、python2系インストール(3系では動作未確認)
+* pyenv設定、python3系インストール
 ```bash
 $ brew install pyenv pyenv-virtualenv gcc
 $ cat >>~/.bash_profile <<'EOT'
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
+if which pyenv > /dev/null; then
+  export PYENV_ROOT="$HOME/.pyenv";
+  export PATH="$PYENV_ROOT/bin:$PATH";
+  eval "$(pyenv init -)";
+fi
 EOT
 $ cat >>~/.bashrc <<'EOT'
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
+if which pyenv > /dev/null; then
+  export PYENV_ROOT="$HOME/.pyenv";
+  export PATH="$PYENV_ROOT/bin:$PATH";
+  eval "$(pyenv init -)";
+fi
 EOT
 $ exec $SHELL
-$ pyenv install 2.<python-version>
-$ pyenv global 2.<python-version>
+$ pyenv install 3.<python-version>
+$ pyenv global 3.<python-version>
 $ pyenv virtualenv general-env
 $ pyenv activate general-env
 ```
@@ -64,8 +70,17 @@ $ HOMEBREW_CASK_OPTS="--appdir=/Applications" ansible-playbook site.yml -vvvv --
 ## その他
 
 * 必要そうなアプリをAppStoreや公式サイトからダウンロード
-  * AppStoreにあるもの、brew caskで管理するには微妙そうなものはbrew caskで管理しない方針
-  * Google日本語入力、chromeなど
+  - Google日本語入力
+  - Google Chrome
+  - Firefox
+  - Dropbox
+  - Clipy
+  - Karabiner-Elements
+  - iTerm2
+  - Atom
+  - etc.
 * ChromeとFirefoxの同期
+* Karabiner-Elementsの設定読み込み
+* iTerm2の設定読み込み
 * SSHの秘密鍵を設定
 * ログイン時起動するアプリを設定

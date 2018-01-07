@@ -1,12 +1,20 @@
 ---
+- name: find /usr/local file
+  find:
+    paths: /usr/local
+    file_type: directory
+  register: usr_local_dir_list
+
 - name: Change /usr/local owner to "{{ ansible_user_id }}"
   become: true
   become_method: sudo
   file:
-    dest: /usr/local
+    path: "{{ item.path }}"
     owner: "{{ ansible_user_id }}"
     group: admin
     recurse: yes
+  with_items:
+    - "{{ usr_local_dir_list.files }}"
 
 - name: Install homebrew
   shell: |
@@ -24,13 +32,6 @@
 - name: Update homebrew
   homebrew:
     update_homebrew: yes
-
-- name: Install homebrew cask packages
-  homebrew_cask:
-    name: "{{ item.name }}"
-    state: present
-  with_items:
-    - "{{ homebrew_cask_packages }}"
 
 - name: Install homebrew packages
   homebrew:

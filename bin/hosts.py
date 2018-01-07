@@ -8,7 +8,7 @@ def main():
     python_interp = os.popen('which python').read().rstrip()
 
     # python 3
-    print json.dumps({
+    print(json.dumps({
         'localhost': {
             'hosts': [
                 '127.0.0.1'
@@ -23,7 +23,7 @@ def main():
                     }
                 }
             }
-        })
+        }))
 
 
 if __name__ == '__main__':

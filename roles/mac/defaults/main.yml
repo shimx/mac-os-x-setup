@@ -11,6 +11,18 @@ symlinks:
   - { src: "{{ macossetup_root }}/roles/mac/files/Library/Application Support/iTerm2/DynamicProfiles", dest: "{{ ansible_user_dir }}/Library/Application Support/iTerm2/DynamicProfiles" }
 
 osx_defaults:
+  - domain: NSGlobalDomain
+    key: KeyRepeat
+    type: int
+    value: 1
+    notify: "Restart Finder"
+
+  - domain: NSGlobalDomain
+    key: InitialKeyRepeat
+    type: int
+    value: 15
+    notify: "Restart Finder"
+
   - domain: com.apple.dock
     key: autohide
     type: bool
@@ -45,4 +57,5 @@ osx_defaults:
     key: IncludeInternalDebugMenu
     type: bool
     value: true
+    notify: "Restart Finder"
 

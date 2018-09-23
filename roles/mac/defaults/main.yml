@@ -8,7 +8,7 @@ directorys:
 
 symlinks:
   - { src: "{{ macossetup_root }}/roles/mac/files/karabiner", dest: "{{ ansible_user_dir }}/.config/karabiner" }
-  - { src: "{{ macossetup_root }}/roles/mac/files/Library/Application Support/iTerm2/DynamicProfiles", dest: "{{ ansible_user_dir }}/Library/Application Support/iTerm2/DynamicProfiles" }
+  - { src: "{{ macossetup_root }}/roles/mac/files/Library/Application\ Support/iTerm2/DynamicProfiles", dest: "{{ ansible_user_dir }}/Library/Application\ Support/iTerm2/DynamicProfiles" }
 
 osx_defaults:
   - domain: NSGlobalDomain

@@ -81,7 +81,5 @@ $ HOMEBREW_CASK_OPTS="--appdir=/Applications" ansible-playbook site.yml -vvvv --
   - Atom
   - etc.
 * ChromeとFirefoxの同期
-* Karabiner-Elementsの設定読み込み
-* iTerm2の設定読み込み
 * SSHの秘密鍵を設定
 * ログイン時起動するアプリを設定

@@ -1,11 +1,8 @@
 ---
 homebrew_taps:
-  - { tap: caskroom/cask }
-  - { tap: homebrew/binary }
-  - { tap: homebrew/dupes }
-  - { tap: homebrew/versions }
-  - { tap: caskroom/fonts }
-  - { tap: caskroom/versions }
+  - { tap: homebrew/cask }
+  - { tap: homebrew/cask-fonts }
+  - { tap: homebrew/cask-versions }
   - { tap: sanemat/font }
   - { tap: kevwil/patches }
   - { tap: bfontaine/utils }

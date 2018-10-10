@@ -20,7 +20,7 @@ osx_defaults:
   - domain: NSGlobalDomain
     key: InitialKeyRepeat
     type: int
-    value: 15
+    value: 13
     notify: "Restart Finder"
 
   - domain: com.apple.dock

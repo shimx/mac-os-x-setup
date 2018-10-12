@@ -86,7 +86,7 @@
                         "product_id": 615,
                         "vendor_id": 76
                     },
-                    "ignore": false,
+                    "ignore": true,
                     "manipulate_caps_lock_led": true,
                     "simple_modifications": []
                 },
@@ -207,7 +207,7 @@
             "simple_modifications": [],
             "virtual_hid_keyboard": {
                 "caps_lock_delay_milliseconds": 0,
-                "country_code": 45,
+                "country_code": 81,
                 "keyboard_type": "jis"
             }
         },
@@ -329,7 +329,7 @@
                         "vendor_id": 1452
                     },
                     "ignore": false,
-                    "manipulate_caps_lock_led": true,
+                    "manipulate_caps_lock_led": false,
                     "simple_modifications": []
                 },
                 {
@@ -448,7 +448,7 @@
             "selected": true,
             "simple_modifications": [],
             "virtual_hid_keyboard": {
-                "country_code": 45
+                "country_code": 1
             }
         }
     ]

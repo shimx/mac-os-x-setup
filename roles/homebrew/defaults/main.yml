@@ -56,3 +56,4 @@ homebrew_packages:
   - { name: ricty, install_options: vim-powerline }
   - { name: neovim/neovim/neovim }
   - { name: heroku-toolbelt }
+  - { name: pigz }

@@ -21,6 +21,11 @@ Mac OS X 初期環境構築
 ```bash
 $ xcode-select --install
 ```
+* git configの最低限の設定をしておく
+```bash
+$ git config --global user.name <ユーザー名>
+$ git config --global user.email <メールアドレス>
+```
 * [homebrewインストール](http://brew.sh/)
 ```bash
 $ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -58,6 +63,12 @@ $ pyenv install 3.<python-version>
 $ pyenv global 3.<python-version>
 $ pyenv virtualenv general-env
 $ pyenv activate general-env
+```
+
+* Mojaveでzlibが有効でないとpyenv installできなかった場合、Mojave用のmacOS SDK headerを入れる  
+参照: https://qiita.com/zreactor/items/c3fd04417e0d61af0afe
+```bash
+sudo installer -pkg /Library/Developer/CommandLineTools/Packages/macOS_SDK_headers_for_macOS_10.14.pkg -target /
 ```
 
 * [Ansible](https://github.com/ansible/ansible)実行

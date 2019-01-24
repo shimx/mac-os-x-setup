@@ -5,6 +5,14 @@ dotfiles_root: "{{ ghq_root }}/shimx/dotfiles"
 git_repositories:
   - { repo: "https://github.com/shimx/dotfiles.git", dest: "{{ ghq_root }}/shimx/dotfiles" }
 
+git_config:
+  - { name: "alias.co", value: "checkout", scope: "global" }
+  - { name: "alias.st", value: "status", scope: "global" }
+  - { name: "alias.ci", value: "commit", scope: "global" }
+  - { name: "alias.br", value: "branch", scope: "global" }
+  - { name: "alias.sth", value: "stash", scope: "global" }
+  - { name: "pager.branch", value: "cat", scope: "global" }
+
 symlinks:
   - { src: "{{ dotfiles_root }}", dest: "{{ ansible_user_dir }}/dotfiles" }
   - { src: "{{ dotfiles_root }}/config/tmux/tmux.conf", dest: "{{ ansible_user_dir }}/.tmux.conf" }

@@ -19,8 +19,8 @@ homebrew_packages:
   - { name: python3 }
   - { name: git }
   - { name: lua }
-  - { name: vim, install_options: "with-python,with-python3,with-lua" }
-  - { name: zsh, install_options: disable-etcdir }
+  - { name: vim }
+  - { name: zsh }
   - { name: zsh-completions }
   - { name: wget }
   - { name: curl }
@@ -53,6 +53,6 @@ homebrew_packages:
   - { name: ag }
   - { name: ack }
   - { name: htop }
-  - { name: ricty, install_options: vim-powerline }
+  - { name: ricty, install_options: with-powerline }
   - { name: neovim/neovim/neovim }
   - { name: pigz }

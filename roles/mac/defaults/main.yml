@@ -1,5 +1,5 @@
 ---
-ghq_root: "{{ ansible_user_dir }}/.ghq/github.com"
+ghq_root: "{{ ansible_user_dir }}/ghq/github.com"
 macossetup_root: "{{ ghq_root }}/shimx/mac-os-x-setup"
 
 directorys:

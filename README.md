@@ -35,8 +35,8 @@ $ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/maste
 
 * [githubの自分のmac-os-x-setup](https://github.com/shimx/mac-os-x-setup)
 ```bash
-$ mkdir -p ~/.ghq/github.com/shimx
-$ git clone https://github.com/shimx/mac-os-x-setup ~/.ghq/github.com/shimx/mac-os-x-setup
+$ mkdir -p ~/ghq/github.com/shimx
+$ git clone https://github.com/shimx/mac-os-x-setup ~/ghq/github.com/shimx/mac-os-x-setup
 ```
 
 ## Ansible実行
@@ -73,7 +73,7 @@ sudo installer -pkg /Library/Developer/CommandLineTools/Packages/macOS_SDK_heade
 
 * [Ansible](https://github.com/ansible/ansible)実行
 ```bash
-$ cd ~/.ghq/github.com/shimx/mac-os-x-setup
+$ cd ~/ghq/github.com/shimx/mac-os-x-setup
 $ pip install -r requirements.txt
 $ HOMEBREW_CASK_OPTS="--appdir=/Applications" ansible-playbook site.yml -vvvv --ask-become-pass
 ```

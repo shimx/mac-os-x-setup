@@ -14,11 +14,9 @@ mkdir -p ${CURRENT_USER_DIR}/Library/Application\ Support/iTerm2
 echo 'make symlinks'
 
 echo "ln -sf ${MACOSSETUP_ROOT}/roles/mac/files/karabiner ${CURRENT_USER_DIR}/.config/karabiner"
-rm -r ${CURRENT_USER_DIR}/.config/karabiner
 ln -sf ${MACOSSETUP_ROOT}/roles/mac/files/karabiner ${CURRENT_USER_DIR}/.config/karabiner
 
 echo "ln -sf ${MACOSSETUP_ROOT}/roles/mac/files/Library/Application\ Support/iTerm2/DynamicProfiles ${CURRENT_USER_DIR}/Library/Application\ Support/iTerm2/DynamicProfiles"
-rm -r ${CURRENT_USER_DIR}/Library/Application\ Support/iTerm2/DynamicProfiles
 ln -sf ${MACOSSETUP_ROOT}/roles/mac/files/Library/Application\ Support/iTerm2/DynamicProfiles ${CURRENT_USER_DIR}/Library/Application\ Support/iTerm2/DynamicProfiles
 
 echo 'Install ricty fonts'

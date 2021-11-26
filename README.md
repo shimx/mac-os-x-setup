@@ -12,34 +12,54 @@ Mac OS X 初期環境構築
 
 ## 前提条件
 
+* M1になったのでansible諦めてshell scriptに
 * 途中、iTerm2の設定を変えるので、ansibleの実行はMacデフォルトのターミナルで行うこと
 * アプリごとに個々にアップデートしたいのでbrew-caskは使わない方針
-* 以下OS X High Sierra(10.13.1)で動作確認済
 * システムをアップデートしておく
 * Xcodeをインストールしておく
 * Xcodeコマンドラインツールをインストールしておく
 ```bash
-$ xcode-select --install
-```
-* git configの最低限の設定をしておく
-```bash
-$ git config --global user.name <ユーザー名>
-$ git config --global user.email <メールアドレス>
+xcode-select --install
 ```
 * [homebrewインストール](http://brew.sh/)
-```bash
-$ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-```
 
 ## 設定ファイルをclone
 
 * [githubの自分のmac-os-x-setup](https://github.com/shimx/mac-os-x-setup)
 ```bash
-$ mkdir -p ~/ghq/github.com/shimx
-$ git clone https://github.com/shimx/mac-os-x-setup ~/ghq/github.com/shimx/mac-os-x-setup
+mkdir -p ~/ghq/github.com/shimx
+```
+```bash
+git clone https://github.com/shimx/mac-os-x-setup ~/ghq/github.com/shimx/mac-os-x-setup
+```
+
+## 設定shell script実行
+
+### git configの最低限の設定
+```bash
+bash ./init_git_config.sh <ユーザー名> <メールアドレス>
+```
+
+### dotfiles設定
+```bash
+bash ./init_dotfiles.sh
+```
+
+### homebrewでインストール
+```bash
+bash ./homebrew_install.sh
+```
+
+### アプリケーション設定
+
+事前にiTerm2とKarabinerを一度起動してから閉じること
+```bash
+bash ./init_application.sh
 ```
 
 ## Ansible実行
+
+この項目は現在廃止
 
 * pyenv設定、python3系インストール
 ```bash

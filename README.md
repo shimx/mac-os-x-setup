@@ -50,6 +50,13 @@ bash ./init_dotfiles.sh
 bash ./homebrew_install.sh
 ```
 
+### Mac設定実行
+
+バージョンによっては動かないかも
+```bash
+bash ./init_mac_env.sh
+```
+
 ### アプリケーション設定
 
 事前にiTerm2とKarabinerを一度起動してから閉じること
@@ -113,4 +120,6 @@ $ HOMEBREW_CASK_OPTS="--appdir=/Applications" ansible-playbook site.yml -vvvv --
   - etc.
 * ChromeとFirefoxの同期
 * SSHの秘密鍵を設定
+* zsh_historyとかコピー
+* zshenv.localとか設定
 * ログイン時起動するアプリを設定

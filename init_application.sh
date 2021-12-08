@@ -17,6 +17,7 @@ echo "ln -sf ${MACOSSETUP_ROOT}/roles/mac/files/karabiner ${CURRENT_USER_DIR}/.c
 ln -sf ${MACOSSETUP_ROOT}/roles/mac/files/karabiner ${CURRENT_USER_DIR}/.config/karabiner
 
 echo "ln -sf ${MACOSSETUP_ROOT}/roles/mac/files/Library/Application\ Support/iTerm2/DynamicProfiles ${CURRENT_USER_DIR}/Library/Application\ Support/iTerm2/DynamicProfiles"
+rm -r ${MACOSSETUP_ROOT}/roles/mac/files/Library/Application\ Support/iTerm2/DynamicProfiles
 ln -sf ${MACOSSETUP_ROOT}/roles/mac/files/Library/Application\ Support/iTerm2/DynamicProfiles ${CURRENT_USER_DIR}/Library/Application\ Support/iTerm2/DynamicProfiles
 
 echo 'Install ricty fonts'

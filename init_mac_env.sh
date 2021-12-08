@@ -18,6 +18,9 @@ defaults write com.apple.finder ShowPathbar -bool true
 # ステータスバー表示
 defaults write com.apple.finder ShowStatusBar -bool true
 
+# 英数のときにキー長押しでウムラウトとかのポップアップを出さなくしてキーリピートが効くように
+defaults write -g ApplePressAndHoldEnabled -bool false
+
 # ~/Library ディレクトリを見えるようにする
 chflags nohidden ~/Library
 
